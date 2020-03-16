@@ -12,12 +12,7 @@ CodeHawk treats each problem as a directory. Since contest problems are (usually
     Creating problem_A... Done!
     hawk>
 
-Here, CodeHawk creates directory ```problem_A``` and enters an interactive shell in that directory. We can run normal shell commands such as ```pwd``` or ```echo```.
-
-    hawk> echo 'Hellow, World!'
-    Hello, World!
-    hawk> pwd
-    /Users/yuhanliu/Documents/CodingCompetitions/problem_A
+Here, CodeHawk creates directory ```problem_A``` and enters an interactive shell in that directory.
 
 ## Creating Source Files
 
@@ -31,41 +26,41 @@ Note that the ```start``` command can likewise be invoked with just ```s```. You
 
 CodeHawk will create a file ```problem_A.<extension>```, where the file extension is the argument that ```start``` is passed. In the above example for example, CodeHawk will create the file ```problem_A.cpp```.
 
-## Adding Testcases
+## Adding Test Cases
 
-Now, to add testcases we can use the ```add``` (or ```a```) command.
+Now, to add test cases we can use the ```add``` (or ```a```) command.
 
     hawk> add
-    Adding testcase from clipboard... Done! Saved as testcase #1
+    Adding test case from clipboard... Done! Saved as test case #1
     hawk>
 
-By default, CodeHawk will extract the testcase from the contents of your clipboard. This is because testcases are usually given on a website, which can be easily copied onto the clipboard.
+By default, CodeHawk will extract the test case from the contents of your clipboard. This is because test cases are usually given on a website, which can be easily copied onto the clipboard.
 
-If the contents of your clipboard is empty, CodeHawk will get the testcase from ```stdin```.
+If the contents of your clipboard is empty, CodeHawk will get the test case from ```stdin```.
 
     hawk> add
     3
     1 5 2
-    Done! Saved as testcase #2
+    Done! Saved as test case #2
     hawk>
 
 Just make sure to use ```Ctrl-D``` to terminate the testcase.
 
-One can also explicitly use stdin by using the ```addstdin``` command.
+One can also explicitly use stdin by passing stdin as an argument.
 
-    hawk> addstdin
+    hawk> add stdin
     3
     1 5 2
-    Done! Saved as testcase #3
+    Done! Saved as test case #3
     hawk>
 
-Alternatively, we can add testcases by specifying them from a file.
+Alternatively, we can add test cases by specifying them from a file.
 
     hawk> add /Users/yuhanliu/Downloads/testcase_1.in
-    Adding testcase "/Users/yuhanliu/Downloads/testcase_1.in"... Done! Saved as testcase #4
+    Adding test case "/Users/yuhanliu/Downloads/testcase_1.in"... Done! Saved as test case #4
     hawk>
 
-CodeHawk will automatically place these testcases in the subdirectory ```.testcases/``` inside the problem directory, with each testcase labelled sequentially ```1.in```, ```2.in```, etc.
+CodeHawk will automatically place these test cases in the subdirectory ```.test cases/``` inside the problem directory, with each test case labelled sequentially ```1.in```, ```2.in```, etc.
 
 ## Testing
 
@@ -73,7 +68,7 @@ Now, for the main part of the CodeHawk—testing! Testing is fairly simple with 
 
     hawk> test
     Compiling... Done!
-    Running on testcase #1
+    Running on test case #1
     ======================
     Input:
     3
@@ -85,7 +80,7 @@ Now, for the main part of the CodeHawk—testing! Testing is fairly simple with 
     1 1
     ======================
     
-    Running on testcase #2
+    Running on test case #2
     ======================
     Input:
     3
@@ -99,13 +94,13 @@ Now, for the main part of the CodeHawk—testing! Testing is fairly simple with 
     ... (complete output truncated for README)
     hawk>
 
-First, CodeHawk will compile (if necessary) the source files. Next, it will iterate through all the testcases and run the program on each one.
+First, CodeHawk will compile (if necessary) the source files. Next, it will iterate through all the test cases and run the program on each one.
 
-We can also test specific testcases by just passing the testcase number to the ```test``` command.
+We can also test specific test cases by just passing the test case number to the ```test``` command.
 
     hawk> test 2 4
     Source file not changed. No need for recompiling
-    Running on testcase #2
+    Running on test case #2
     ======================
     Input:
     3
@@ -117,7 +112,7 @@ We can also test specific testcases by just passing the testcase number to the `
     1 1
     ======================
     
-    Running on testcase #4
+    Running on test case #4
     ======================
     Input:
     2
@@ -128,11 +123,3 @@ We can also test specific testcases by just passing the testcase number to the `
     1 1
     ======================
     hawk>
-
-# Timeline
-| Feature                       | Date | Done |
-| ----------------------------- | ---- | ---- |
-| Basic CLI/Shell               | 3/20 |      |
-| Configure Settings            | 3/27 |      |
-| Adding Source Files/Testcases | 4/3  |      |
-| Testing/Benchmarking          | 4/10 |      |
