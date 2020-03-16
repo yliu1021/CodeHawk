@@ -130,9 +130,9 @@ We can also test specific testcases by just passing the testcase number to the `
     hawk>
 
 # Timeline
-| Feature                       | Date |
-| ----------------------------- | ---- |
-| Basic CLI/Shell               | 3/20 |
-| Configure Settings            | 3/27 |
-| Adding Source Files/Testcases | 4/3  |
-| Testing/Benchmarking          | 4/10 |
+| Feature                       | Date | Done |
+| ----------------------------- | ---- | ---- |
+| Basic CLI/Shell               | 3/20 |      |
+| Configure Settings            | 3/27 |      |
+| Adding Source Files/Testcases | 4/3  |      |
+| Testing/Benchmarking          | 4/10 |      |
